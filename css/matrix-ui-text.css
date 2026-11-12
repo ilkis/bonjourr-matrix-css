@@ -1,0 +1,11 @@
+/* Matrix UI: clock, greeting, weather, quotes and link titles as glowing terminal text. */
+#interface {
+	--mx-ui: 0 255 65; /* text colour, as "R G B" */
+	--font-color: var(--mx-ui);
+	--font-family: Consolas, Monaco, "Ubuntu Mono", monospace;
+	--font-weight-clock: 400;
+	--text-shadow-interface: 0 0 0.4em rgb(var(--mx-ui) / 0.7);
+	color: rgb(var(--mx-ui));
+	font-family: var(--font-family);
+	text-shadow: var(--text-shadow-interface);
+}

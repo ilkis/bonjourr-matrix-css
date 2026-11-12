@@ -1,0 +1,24 @@
+/* Matrix UI: search bar, notes, Pomodoro and quick-link tiles as green phosphor terminal panels. */
+#interface { --mx-ui: 0 255 65; /* accent colour, as "R G B" */ }
+#searchbar-wrapper, #sb-suggestions, #pocket-editor, #pomodoro_container .glass, #linkblocks .link-icon {
+	color: rgb(var(--mx-ui));
+	background: rgb(0 10 3 / 0.85);
+	border: 1px solid rgb(var(--mx-ui) / 0.35);
+	border-radius: 0;
+	box-shadow: 0 0 12px rgb(var(--mx-ui) / 0.15);
+	-webkit-backdrop-filter: none;
+	backdrop-filter: none;
+}
+#searchbar-wrapper, #pocket-editor, #pmdr_modes { background-image: repeating-linear-gradient(rgb(0 0 0 / 0) 0 2px, rgb(0 0 0 / 0.3) 2px 3px); }
+#searchbar, #sb-suggestions, #pocket-editor, #pomodoro_container {
+	color: rgb(var(--mx-ui));
+	font-family: Consolas, Monaco, "Ubuntu Mono", monospace;
+	caret-color: rgb(var(--mx-ui));
+	text-shadow: 0 0 6px rgb(var(--mx-ui) / 0.6);
+}
+#searchbar::placeholder { color: rgb(var(--mx-ui) / 0.5); }
+#searchbar-wrapper:focus-within, #pocket-editor:focus-within { border-color: rgb(var(--mx-ui)); }
+#pocket-editor input, #focus-toggle input { accent-color: rgb(var(--mx-ui)); }
+#pmdr_modes .glider, #pmdr_modes .pomodoro_mode, #pmdr_modes .pomodoro_mode.active { border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+#pmdr_modes .glider, #pmdr_modes .pomodoro_mode.active { background: rgb(var(--mx-ui) / 0.2); }
+#linkblocks .link-icon img { border-radius: 0; }

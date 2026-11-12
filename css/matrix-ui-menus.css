@@ -1,0 +1,21 @@
+/* Matrix UI: right-click menu, layout mover dialog and the settings button. */
+dialog, #show-settings {
+	--mx-ui: 0 255 65; /* accent colour, as "R G B" */
+	--color-text: rgb(var(--mx-ui));
+	--color-dialog: rgb(0 10 3 / 0.92);
+	--color-dialog-border: rgb(var(--mx-ui) / 0.35);
+	--color-dialog-highlight: rgb(var(--mx-ui) / 0.15);
+	--color-dialog-input-text: #b8ffc9;
+	--color-dialog-input-bg: #0d3b1a;
+	--accent-color: var(--mx-ui);
+}
+dialog, dialog input, dialog select, dialog button { font-family: Consolas, Monaco, "Ubuntu Mono", monospace; border-radius: 0; }
+dialog { color: rgb(var(--mx-ui)); box-shadow: 0 0 16px rgb(var(--mx-ui) / 0.2); -webkit-backdrop-filter: none; backdrop-filter: none; }
+#show-settings button, #show-settings.shown button {
+	color: rgb(var(--mx-ui));
+	background: rgb(0 10 3 / 0.85);
+	border: 1px solid rgb(var(--mx-ui) / 0.35);
+	border-radius: 0;
+	-webkit-backdrop-filter: none;
+	backdrop-filter: none;
+}

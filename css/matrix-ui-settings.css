@@ -1,0 +1,29 @@
+/* Matrix UI: settings panel. Works on its own or next to any other snippet. */
+aside {
+	--mx-ui: 0 255 65; /* accent colour, as "R G B" */
+	--color-text: #b8ffc9;
+	--color-light-text: rgb(var(--mx-ui));
+	--color-param: 0 10 3;
+	--color-settings: #000300;
+	--color-input: #0d3b1a;
+	--color-input-outside: #0d3b1a;
+	--color-border: #0d3b1a;
+	--color-areas: #000300;
+	--color-areas-text: rgb(var(--mx-ui));
+	--color-focused: #0a2912;
+	--color-placeholder: #2f8f4a;
+	--accent-color: var(--mx-ui);
+	--color-green: var(--mx-ui);
+	--border-radius: 0px;
+	border-left: 1px solid #0d3b1a;
+}
+aside, aside input, aside select, aside button, aside textarea { font-family: Consolas, Monaco, "Ubuntu Mono", monospace; }
+aside .param { border: 1px solid #0d3b1a; }
+aside .param, aside select, aside button, aside textarea, aside input:not(.switch):not([type="range"]) { border-radius: 0; }
+aside .settings-title h2 { text-transform: uppercase; letter-spacing: 0.1em; }
+aside .settings-title h2::before { content: "> "; }
+aside::-webkit-scrollbar-thumb { background-color: #0d3b1a; border-radius: 0; }
+aside { background-image: repeating-linear-gradient(rgb(0 0 0 / 0) 0 2px, rgb(0 0 0 / 0.25) 2px 3px); text-shadow: 0 0 6px rgb(var(--mx-ui) / 0.45); }
+aside input, aside textarea { caret-color: rgb(var(--mx-ui)); }
+aside .switch, aside .switch::before, aside .switch::after { border-radius: 0; }
+aside .switch:not(:checked) { background-color: #0d3b1a; }
