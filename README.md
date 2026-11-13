@@ -43,6 +43,46 @@ settings under Settings → Background:
 With a texture overlay on, the brightest rain layer takes the texture's
 opacity and becomes dimmer, so the clock, greeting and links stand out.
 
+## SVG backgrounds
+
+The same eleven rains as animated SVG files, used as a regular Bonjourr
+background by link. They take no room in Custom CSS, so all four UI
+snippets fit next to them, and Bonjourr's own blur, brightness and texture
+settings apply to them.
+
+1. Settings → Background → Background type: **URLs**.
+2. Paste one link into **Background URLs** and press **Apply changes**:
+
+```
+https://ilkis.github.io/bonjourr-matrix-css/svg/fhd/matrix-katakana.svg
+```
+
+The link is `…/svg/<set>/<name>.svg`. Pick the set for your screen:
+
+| Set | Made for | Folder |
+|---|---|---|
+| `fhd` | 1920×1080 | [`svg/fhd`](svg/fhd) |
+| `2k` | 2560×1440 | [`svg/2k`](svg/2k) |
+| `4k` | 3840×2160 | [`svg/4k`](svg/4k) |
+
+The names match the CSS snippets: `matrix-katakana`, `matrix-binary`,
+`matrix-crt`, `matrix-depth`, `matrix-glitch`, `matrix-spectrum`,
+`matrix-hex`, `matrix-tilt`, `matrix-upward`, `matrix-neon`,
+`matrix-operator`.
+
+A file holds a fixed number of glyphs and is stretched to cover the screen.
+A set made for a smaller screen still works on a larger one, with larger
+glyphs; a set made for a larger screen gives smaller glyphs.
+
+Differences from the CSS snippets:
+
+- No variables. Colour, size and speed are fixed in the file; to change
+  them, download the file, edit it and host your copy.
+- Do not enable a rain CSS snippet at the same time: it replaces the
+  background, the SVG included.
+- Depth and Tilt are the heaviest files. Tilt in Firefox gets slower as
+  the screen gets larger.
+
 ## Terminal-style UI
 
 Small independent snippets; they work with any background.
@@ -113,6 +153,20 @@ UI snippets it means the styles were applied to the panels.
 - Glitch and Neon: the glitch frames last a fraction of a second. Neon's
   colour split was seen in Chromium only; Glitch's frames were not caught in
   any browser. The rain itself was checked in all three.
+
+### SVG backgrounds
+
+All eleven files of each set were opened as a page background styled like
+Bonjourr's own, in Chromium 141, Firefox 142 and WebKit 26.0 (Playwright
+builds on Linux, no GPU), each set on a screen of its own size. Every file
+animated in all three browsers. Katakana was also checked inside Bonjourr
+as a URL background.
+
+- Tilt: the perspective shows in Chromium and Firefox; that WebKit build
+  draws it flat, as with the CSS snippet.
+- Tilt in Firefox was the slowest case: without a GPU it dropped to a few
+  frames per second on a 3840×2160 screen.
+- Not tested in Safari itself, and not measured with a GPU.
 
 ## License
 
