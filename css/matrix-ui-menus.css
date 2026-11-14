@@ -8,10 +8,11 @@ dialog, #show-settings {
 	--color-dialog-input-text: #b8ffc9;
 	--color-dialog-input-bg: #0d3b1a;
 	--accent-color: var(--mx-ui);
+	--icon-color: rgb(var(--mx-ui));
 }
 dialog, dialog input, dialog select, dialog button { font-family: Consolas, Monaco, "Ubuntu Mono", monospace; border-radius: 0; }
 dialog { color: rgb(var(--mx-ui)); box-shadow: 0 0 16px rgb(var(--mx-ui) / 0.2); -webkit-backdrop-filter: none; backdrop-filter: none; }
-#show-settings button, #show-settings.shown button {
+#show-settings#show-settings button {
 	color: rgb(var(--mx-ui));
 	background: rgb(0 10 3 / 0.85);
 	border: 1px solid rgb(var(--mx-ui) / 0.35);

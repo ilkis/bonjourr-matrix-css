@@ -19,11 +19,13 @@ aside {
 }
 aside, aside input, aside select, aside button, aside textarea { font-family: Consolas, Monaco, "Ubuntu Mono", monospace; }
 aside .param { border: 1px solid #0d3b1a; }
-aside .param, aside select, aside button, aside textarea, aside input:not(.switch):not([type="range"]) { border-radius: 0; }
+#settings#settings *, aside .switch::after { border-radius: 0; }
 aside .settings-title h2 { text-transform: uppercase; letter-spacing: 0.1em; }
 aside .settings-title h2::before { content: "> "; }
 aside::-webkit-scrollbar-thumb { background-color: #0d3b1a; border-radius: 0; }
 aside { background-image: repeating-linear-gradient(rgb(0 0 0 / 0) 0 2px, rgb(0 0 0 / 0.25) 2px 3px); text-shadow: 0 0 6px rgb(var(--mx-ui) / 0.45); }
 aside input, aside textarea { caret-color: rgb(var(--mx-ui)); }
-aside .switch, aside .switch::before, aside .switch::after { border-radius: 0; }
 aside .switch:not(:checked) { background-color: #0d3b1a; }
+aside .switch::after { background: #b8ffc9; }
+aside .range::-webkit-slider-thumb { background: rgb(var(--mx-ui)); border-radius: 0; }
+aside .range::-moz-range-thumb { background: rgb(var(--mx-ui)); border-radius: 0; }

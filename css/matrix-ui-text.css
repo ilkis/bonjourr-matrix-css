@@ -9,3 +9,4 @@
 	font-family: var(--font-family);
 	text-shadow: var(--text-shadow-interface);
 }
+#interface .weather-icon { filter: grayscale(1) sepia(1) hue-rotate(80deg) saturate(5); }

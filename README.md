@@ -92,10 +92,10 @@ The colour is `--mx-ui`, written as `R G B`.
 
 | Snippet | Styles |
 |---|---|
-| [`matrix-ui-text.css`](css/matrix-ui-text.css) | clock, greeting, weather, quotes |
-| [`matrix-ui-widgets.css`](css/matrix-ui-widgets.css) | search bar, notes, Pomodoro, quick-link tiles |
-| [`matrix-ui-settings.css`](css/matrix-ui-settings.css) | settings panel |
-| [`matrix-ui-menus.css`](css/matrix-ui-menus.css) | context menu, layout dialog, settings button |
+| [`matrix-ui-text.css`](css/matrix-ui-text.css) | clock, greeting, weather and its icon, quotes |
+| [`matrix-ui-widgets.css`](css/matrix-ui-widgets.css) | search bar, notes and their checkboxes, Pomodoro and its Focus switch, quick-link tiles and folders |
+| [`matrix-ui-settings.css`](css/matrix-ui-settings.css) | settings panel, its switches and sliders |
+| [`matrix-ui-menus.css`](css/matrix-ui-menus.css) | context menu, layout dialog, settings button and its gear |
 
 ## Size limits
 
@@ -105,7 +105,8 @@ snippet:
 
 | Rain snippet | Room for one of |
 |---|---|
-| Katakana, Binary, CRT, Hex, Upward, Operator | widgets, settings, or text + menus |
+| Binary, Hex, Operator | widgets, settings, or text + menus |
+| Katakana, CRT, Upward | settings, or text + menus |
 | Spectrum, Tilt | text or menus |
 | Depth, Glitch, Neon | text |
 
@@ -117,7 +118,8 @@ All four UI snippets together fit when no rain snippet is used.
 - A rain snippet replaces the regular background while enabled.
 - Katakana comes from system fonts; without Japanese fonts use Binary, CRT or Hex.
 - The glow (`filter: drop-shadow`) is the expensive part; remove that line on slow machines.
-- Site icons, the weather icon and the settings gear keep their own colours.
+- Site icons and the analog clock keep their own colours.
+- The weather icon is tinted by a fixed green filter in `matrix-ui-text.css`; it does not follow `--mx-ui`.
 - Spectrum tints white rain with a blended overlay, so `--mx-color` must stay white.
 - Operator is dense; the default clock and greeting are harder to read over it.
 
